@@ -65,7 +65,7 @@ services:
     volumes:
       - postgres:/var/lib/postgresql/data
     healthcheck:
-      test: "pg_isready -U ${DB_USERNAME}"
+      test: "pg_isready -p ${DB_PORT} -U ${DB_USERNAME}"
     command: "-p ${DB_PORT}"
 
   redis:
@@ -79,7 +79,7 @@ services:
     volumes:
       - redis:/data
     healthcheck:
-      test: redis-cli ping
+      test: "redis-cli -p ${REDIS_PORT} ping"
 
 volumes:
   postgres:
