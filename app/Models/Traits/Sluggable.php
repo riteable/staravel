@@ -8,11 +8,15 @@ trait Sluggable
 {
     public static function bootSluggable()
     {
-        static::creating(function ($model) {
+        static::saving(function ($model) {
             $slugField = $model->slugField ?? 'slug';
             $sluggableField = $model->sluggableField ?? 'name';
 
-            if ($model->{$slugField}) {
+            if ($model->isDirty($slugField)) {
+                return null;
+            }
+
+            if (!$model->{$sluggableField}) {
                 return null;
             }
 
