@@ -1,6 +1,6 @@
 # Larawire
 
-A basic Laravuxt + Livewire project template.
+A basic Laravel + Livewire project template.
 
 ## Usage
 
