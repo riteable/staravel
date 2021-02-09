@@ -1,5 +1,5 @@
 AUTHOR := riteable
-PROJECT := ftmpress
+PROJECT := larawire
 COMMIT := $$(git rev-parse --short HEAD)
 IMAGE := ${AUTHOR}/${PROJECT}:${COMMIT}
 

@@ -8,6 +8,10 @@
 
         <x-alert message="{{ $errors->first() }}" type="error" />
 
+        @if (session('status'))
+          <x-alert message="{{ session('status') }}" type="success" />
+        @endif
+
         <form method="post" action="{{ route('password.email') }}">
             @csrf
 

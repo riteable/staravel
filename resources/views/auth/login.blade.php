@@ -32,7 +32,7 @@
                     />
 
                     <div>
-                        <a href="/auth/forgot-password">
+                        <a href="/forgot-password">
                             {{ __('Forgot password?') }}
                         </a>
                     </div>
