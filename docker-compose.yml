@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   app:
-    image: "${APP_ID}-app:latest"
+    image: "${IMAGE}"
     container_name: "${APP_ID}-app"
     build: .
     user: "1000:1000"
@@ -31,7 +31,7 @@ services:
       test: curl -f http://localhost || exit 1
 
   worker:
-    image: "${APP_ID}-app:latest"
+    image: "${IMAGE}"
     container_name: "${APP_ID}-worker"
     build: .
     user: "1000:1000"
