@@ -1,4 +1,5 @@
 const mix = require('laravel-mix')
+require('laravel-mix-clean-css')
 
 /*
  |--------------------------------------------------------------------------
@@ -13,4 +14,8 @@ const mix = require('laravel-mix')
 
 mix.js('resources/js/app.js', 'public/js')
   .sass('resources/css/app.scss', 'public/css')
+  .cleanCss({
+    level: 2,
+    format: mix.inProduction() ? false : 'beautify'
+  })
   .version()
