@@ -1,5 +1,5 @@
-<div class="bg-gray">
-    <x-layout.container>
+<div class="bg-gray border-top border-bottom">
+    <x-layout.container padding="10">
         <div class="text-gray text-center text-small">
             {{ __('Copyright :year - :app_name', [
                 'year' => date('Y'),

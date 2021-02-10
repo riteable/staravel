@@ -1,0 +1,13 @@
+@each $direction in $directions {
+    .border-#{$direction} {
+        border-#{$direction}: 1px solid $border-color !important;
+    }
+
+    .border-#{$direction}-dark {
+        border-#{$direction}: 1px solid $border-color-dark !important;
+    }
+
+    .border-#{$direction}-light {
+        border-#{$direction}: 1px solid $border-color-light !important;
+    }
+}

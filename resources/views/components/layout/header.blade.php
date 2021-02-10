@@ -1,4 +1,4 @@
-<header class="bg-secondary">
+<header class="bg-secondary border-bottom">
     <x-layout.container padding="3">
         <nav class="navbar">
             <div class="navbar-section">

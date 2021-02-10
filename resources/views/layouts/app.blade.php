@@ -15,7 +15,7 @@
     </head>
 
     <body>
-        <x-layout.navbar />
+        <x-layout.header />
 
         <main>
             @yield('content')

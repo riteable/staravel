@@ -4,7 +4,7 @@
     <x-layout.container>
         <div class="columns justify-center">
             <div class="column col-6">
-                <x-alert message="{{ $errors->first() }}" type="error" />
+                <x-alert :message="$errors->first()" type="error" class="mb-2" />
 
                 <div class="card">
                     <x-card.header
@@ -34,7 +34,7 @@
                             </div>
 
                             <div class="form-group">
-                                <div class="d-flex space-between align-center">
+                                <div class="d-flex space-between">
                                     <x-form.label
                                         text="{{ __('Password') }}"
                                         for="form-password"
