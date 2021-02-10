@@ -7,14 +7,10 @@
                 <x-alert message="{{ $errors->first() }}" type="error" />
 
                 <div class="card">
-                    <header class="card-header">
-                        <h2 class="card-title h5">
-                            {{ __('Login') }}
-                        </h2>
-                        <p class="card-subtitle text-gray">
-                            {{ __('Sign in with an existing account.') }}
-                        </p>
-                    </header>
+                    <x-card.header
+                        title="{{ __('Login') }}"
+                        subtitle="{{ __('Sign in with an existing account') }}"
+                    />
 
                     <div class="card-body">
                         <form method="post" action="{{ route('login') }}">
