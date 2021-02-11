@@ -3,6 +3,18 @@
 // @import "~spectre.css/src/icons/icons-action";
 // @import "~spectre.css/src/icons/icons-object";
 
+.has-icon-left {
+    .icon {
+        margin-right: $unit-1;
+    }
+}
+
+.has-icon-right {
+    .icon {
+        margin-left: $unit-1;
+    }
+}
+
 @each $key, $size in $icon-sizes {
     .icon-#{$key} {
         width: $size;

@@ -1,8 +1,8 @@
-<header class="bg-secondary border-bottom">
+<header class="bg-secondary">
     <x-layout.container padding="3">
         <nav class="navbar">
             <div class="navbar-section">
-                <a href="{{ url('/') }}" class="text-bold text-uppercase text-decoration-none">
+                <a href="/" class="text-bold text-uppercase text-decoration-none">
                     <span class="text-large">
                         <x-heroicon-s-beaker class="icon icon-24" />
                     </span>
@@ -12,24 +12,34 @@
 
             <div class="navbar-section">
                 @auth
-                    <form method="post" action="{{ route('logout') }}">
+                    <a href="{{ route('dashboard') }}" class="btn btn-link">
+                        <x-heroicon-s-user class="icon icon-24" />
+                    </a>
+
+                    <form method="post" action="{{ route('logout') }}" class="ml-1">
                         @csrf
 
-                        <button class="btn">
+                        <button class="btn btn-link has-icon-left">
+                            <x-heroicon-o-logout class="icon icon-24" />
+
                             {{ __('Logout') }}
                         </button>
                     </form>
-                @else
-                    <a href="{{ route('login') }}" class="btn btn-link">
-                        {{ __('Login') }}
-                    </a>
+                @endauth
 
-                    @if (Route::has('register'))
-                        <a href="{{ route('register') }}" class="btn btn-primary">
-                            {{ __('Register') }}
+                @guest
+                    <div>
+                        <a href="{{ route('login') }}" class="btn btn-link">
+                            {{ __('Login') }}
                         </a>
-                    @endif
-                @endif
+
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}" class="btn btn-primary">
+                                {{ __('Register') }}
+                            </a>
+                        @endif
+                    </div>
+                @endguest
             </div>
         </nav>
     </x-layout.container>
