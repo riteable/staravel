@@ -1,3 +1,8 @@
+@import "~spectre.css/src/icons/icons-core";
+// @import "~spectre.css/src/icons/icons-navigation";
+// @import "~spectre.css/src/icons/icons-action";
+// @import "~spectre.css/src/icons/icons-object";
+
 @each $key, $size in $icon-sizes {
     .icon-#{$key} {
         width: $size;
