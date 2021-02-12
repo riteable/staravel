@@ -7,11 +7,11 @@
 
             <p>How are you?</p>
 
-            <a href="/users/edit" class="btn">
+            <a href="{{ route('profile.edit', ['user' => $authUser]) }}" class="btn">
                 {{ __('Edit profile') }}
             </a>
 
-            <a href="/users/update-password" class="btn">
+            <a href="{{ route('user-password.edit') }}" class="btn">
                 {{ __('Update password') }}
             </a>
         </div>
