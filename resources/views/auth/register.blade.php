@@ -73,7 +73,7 @@
 
                             <div class="form-group">
                                 <x-form.label
-                                    text="{{ __('Confirm password') }}"
+                                    text="{{ __('Password confirmation') }}"
                                     for="form-password-confirmation"
                                 />
 

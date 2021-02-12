@@ -1,7 +1,9 @@
-@props(['field'])
+@props(['field', 'bag'])
 
-@error($field)
-    <div class="form-input-hint">
-        {{ $message }}
-    </div>
-@enderror
+<div class="form-input-hint">
+    @if (empty($bag))
+        {{ $errors->first($field) }}
+    @else
+        {{ $errors->{$bag}->first($field) }}
+    @endif
+</div>
