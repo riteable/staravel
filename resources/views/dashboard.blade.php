@@ -7,7 +7,7 @@
 
             <p>How are you?</p>
 
-            <a href="{{ route('profile.edit', ['user' => $authUser]) }}" class="btn">
+            <a href="{{ route('user-profile-information.edit') }}" class="btn">
                 {{ __('Edit profile') }}
             </a>
 
