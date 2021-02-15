@@ -30,7 +30,7 @@
                                     id="form-email"
                                     type="email"
                                     name="email"
-                                    value="{{ $authUser->email }}"
+                                    value="{{ auth()->user()->email }}"
                                     placeholder="@"
                                     has-errors="{{ $errors->updateProfileInformation->has('email') }}"
                                     required

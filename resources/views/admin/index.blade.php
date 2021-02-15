@@ -8,7 +8,7 @@
             </h2>
 
             <p class="subtitle">
-                Use the force, {{ $authUser->name }}.
+                Use the force, {{ auth()->user()->name }}.
             </p>
         </div>
     </x-layout.container>

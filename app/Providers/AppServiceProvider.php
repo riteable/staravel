@@ -24,10 +24,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        view()->composer('*', function ($view) {
-            $view->with('authUser', auth()->user());
-        });
-
         Blade::if('role', function ($role) {
             if (!auth()->user()) {
                 return false;

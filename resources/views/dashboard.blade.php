@@ -3,7 +3,7 @@
 @section('content')
     <x-layout.container>
         <div class="text-center">
-            <h2>Hi, {{ $authUser->name }}!</h2>
+            <h2>Hi, {{ auth()->user()->name }}!</h2>
 
             <p>How are you?</p>
 
