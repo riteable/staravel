@@ -11,6 +11,13 @@ class User extends Authenticatable implements MustVerifyEmail
 {
     use HasFactory, Notifiable;
 
+    const ROLE_USER = 'user';
+    const ROLE_ADMIN = 'admin';
+    const ROLES = [
+        self::ROLE_USER,
+        self::ROLE_ADMIN
+    ];
+
     /**
      * The attributes that are mass assignable.
      *
@@ -44,5 +51,14 @@ class User extends Authenticatable implements MustVerifyEmail
     public function getRouteKeyName()
     {
         return 'name';
+    }
+
+    public function isAdmin()
+    {
+        if (empty($this->role)) {
+            return false;
+        }
+
+        return $this->role === self::ROLE_ADMIN;
     }
 }

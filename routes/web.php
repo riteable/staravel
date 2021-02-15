@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileInformationController;
 use App\Http\Controllers\PasswordController;
+use App\Http\Controllers\Admin\IndexController as AdminIndexController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +31,12 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('user/password', [PasswordController::class, 'edit'])
         ->name('user-password.edit');
 });
+
+Route::middleware('can:access-admin')
+    ->prefix('admin')
+    ->name('admin.')
+    ->group(function () {
+        Route::get('/', AdminIndexController::class)->name('index');
+
+        //
+    });

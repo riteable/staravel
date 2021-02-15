@@ -16,6 +16,12 @@
                         <x-heroicon-s-user class="icon icon-24" />
                     </a>
 
+                    @role('admin')
+                        <a href="{{ route('admin.index') }}" class="btn btn-link">
+                            <x-heroicon-s-lock-closed class="icon icon-24" />
+                        </a>
+                    @endrole
+
                     <form method="post" action="{{ route('logout') }}" class="ml-1">
                         @csrf
 
