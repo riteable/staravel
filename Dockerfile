@@ -6,12 +6,14 @@ WORKDIR /app
 
 COPY package.json .
 COPY package-lock.json .
-COPY webpack.mix.js .
-COPY .eslintrc.js .
-COPY resources/css resources/css
-COPY resources/js resources/js
 
 RUN npm ci
+
+COPY resources/css resources/css
+COPY resources/js resources/js
+COPY webpack.mix.js .
+# COPY .eslintrc.js .
+
 RUN npm run production
 
 

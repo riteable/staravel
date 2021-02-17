@@ -12,7 +12,8 @@ require('laravel-mix-clean-css')
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
+mix.setPublicPath('public')
+  .js('resources/js/app.js', 'public/js')
   .sass('resources/css/app.scss', 'public/css')
   .cleanCss({
     level: 2,
