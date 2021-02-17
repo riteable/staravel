@@ -2,10 +2,14 @@
 
 @section('content')
     <x-layout.container>
-        <div class="text-center">
-            <h2>Hi, there!</h2>
+        <x-layout.compact>
+            <div class="text-center">
+                <h2 class="title">
+                    Hi, there!
+                </h2>
 
-            <p>Let this be the start of something beautiful.</p>
-        </div>
+                <p class="subtitle">Let this be the start of something beautiful.</p>
+            </div>
+        </x-layout.compact>
     </x-layout.container>
 @endsection
