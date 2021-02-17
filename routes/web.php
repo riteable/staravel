@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileInformationController;
 use App\Http\Controllers\PasswordController;
 use App\Http\Controllers\Admin\IndexController as AdminIndexController;
+use App\Http\Controllers\Admin\UserController as AdminUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,5 +39,7 @@ Route::middleware('can:access-admin')
     ->group(function () {
         Route::get('/', AdminIndexController::class)->name('index');
 
-        //
+        Route::resources([
+            'users' => AdminUserController::class,
+        ]);
     });

@@ -13,5 +13,19 @@
                 </p>
             </div>
         </x-layout.compact>
+
+        <div class="columns">
+            <x-layout.column context="list">
+                <div class="card">
+                    <x-card.header title="{{ __('Users') }}" subtitle="{{ __('Manage your users') }}" />
+
+                    <div class="card-body">
+                        <a href="{{ route('admin.users.index') }}">
+                            {{ __('Index') }}
+                        </a>
+                    </div>
+                </div>
+            </x-layout.column>
+        </div>
     </x-layout.container>
 @endsection
