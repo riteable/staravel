@@ -27,7 +27,6 @@
                         </x-card.header>
 
                         <div class="card-body">
-
                             <div title="{{ $user->created_at }}">
                                 {{ __('Created :timestamp', ['timestamp' => $user->created_at->diffForHumans()]) }}
                             </div>
@@ -36,5 +35,7 @@
                 </x-layout.column>
             @endforeach
         </div>
+
+        {{ $users->links() }}
     </x-layout.container>
 @endsection

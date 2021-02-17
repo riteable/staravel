@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Blade;
+use Illuminate\Pagination\Paginator;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -24,6 +25,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        Paginator::defaultView('components.paginator');
+        Paginator::defaultSimpleView('components.paginator');
+
         Blade::if('role', function ($role) {
             if (!auth()->user()) {
                 return false;
