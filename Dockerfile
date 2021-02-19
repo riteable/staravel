@@ -11,10 +11,10 @@ RUN npm ci
 
 COPY resources/css resources/css
 COPY resources/js resources/js
-COPY webpack.mix.js .
-# COPY .eslintrc.js .
+COPY webpack.common.js .
+COPY webpack.prod.js .
 
-RUN npm run production
+RUN npm run prod
 
 
 # Stage: PHP app

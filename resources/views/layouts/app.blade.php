@@ -9,9 +9,9 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap">
-        <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
+        <link rel="stylesheet" href="{{ manifest_asset('app.css') }}">
 
-        <script src="{{ mix('/js/app.js') }}" defer></script>
+        <script src="{{ manifest_asset('app.js') }}" defer></script>
     </head>
 
     <body>
