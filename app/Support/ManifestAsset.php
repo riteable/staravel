@@ -21,7 +21,9 @@ class ManifestAsset
     {
         static $manifests = [];
 
-        if (! $manifestPath) {
+        if ($manifestPath) {
+            $manifestPath = public_path($manifestPath);
+        } else {
             $manifestPath = public_path('/manifest.json');
         }
 

@@ -8,10 +8,12 @@
 
         <link rel="preconnect" href="https://fonts.gstatic.com">
 
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap">
-        <link rel="stylesheet" href="{{ manifest_asset('app.css') }}">
+        <link rel="manifest" href="{{ asset('web-manifest.json') }}">
 
-        <script src="{{ manifest_asset('app.js') }}" defer></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap">
+        <link rel="stylesheet" href="{{ manifest_asset('app.css', '/assets-manifest.json') }}">
+
+        <script src="{{ manifest_asset('app.js', '/assets-manifest.json') }}" defer></script>
     </head>
 
     <body>
