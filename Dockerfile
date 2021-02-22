@@ -11,6 +11,7 @@ RUN npm ci
 
 COPY resources/css resources/css
 COPY resources/js resources/js
+COPY resources/img resources/img
 COPY webpack.common.js .
 COPY webpack.prod.js .
 

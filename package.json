@@ -1,6 +1,10 @@
 {
   "name": "larawire",
   "description": "A basic Laravel + Livewire project template.",
+  "author": {
+    "name": "Riteable",
+    "url": "https://github.com/riteable"
+  },
   "private": true,
   "scripts": {
     "prod": "webpack -c webpack.prod.js",
@@ -10,11 +14,11 @@
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^5.0.2",
     "eslint": "^7.20.0",
-    "eslint-config-standard": "^14.1.1",
+    "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.3.1",
-    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-standard": "^5.0.0",
     "mini-css-extract-plugin": "^1.3.8",
     "sass": "^1.32.6",
     "sass-loader": "^11.0.1",

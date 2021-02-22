@@ -10,10 +10,12 @@
 
         <link rel="manifest" href="{{ asset('web-manifest.json') }}">
 
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap">
-        <link rel="stylesheet" href="{{ manifest_asset('app.css', '/assets-manifest.json') }}">
+        <link rel="icon" href="{{ manifest_icon_search('sizes', '16x16', '/web-manifest.json') }}">
 
-        <script src="{{ manifest_asset('app.js', '/assets-manifest.json') }}" defer></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap">
+        <link rel="stylesheet" href="{{ manifest_get('app.css', '/assets-manifest.json') }}">
+
+        <script src="{{ manifest_get('app.js', '/assets-manifest.json') }}" defer></script>
     </head>
 
     <body>
