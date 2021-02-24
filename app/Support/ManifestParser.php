@@ -22,6 +22,9 @@ class ManifestParser
         static $manifests = [];
 
         if ($manifestPath) {
+            if (! Str::startsWith($manifestPath, '/') && ! Str::startsWith($manifestPath, 'https')) {
+                $path = "/{$manifestPath}";
+            }
             $manifestPath = public_path($manifestPath);
         } else {
             $manifestPath = public_path('/manifest.json');

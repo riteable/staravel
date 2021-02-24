@@ -6,7 +6,8 @@ const WebpackPwaManifest = require('webpack-pwa-manifest')
 
 module.exports = {
   entry: {
-    app: ['./resources/js/app.js', './resources/css/app.scss']
+    app: ['./resources/js/app.js', './resources/css/app.scss'],
+    vendor: ['./resources/js/vendor/livewire/livewire.js']
   },
   output: {
     path: path.resolve(__dirname, 'public'),
