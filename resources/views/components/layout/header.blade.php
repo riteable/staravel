@@ -3,9 +3,9 @@
         <nav class="navbar">
             <div class="navbar-brand">
                 <a href="/" class="navbar-item has-icon-left">
-                    <x-icon name="heroicon-s-beaker" size="24" class="has-text-grey-dark" />
+                    <x-icon name="heroicon-s-beaker" size="24" class="has-text-muted" />
 
-                    <span class="has-text-light is-uppercase has-text-weight-bold">
+                    <span class="has-text-body is-uppercase has-text-weight-bold">
                         {{ config('app.name') }}
                     </span>
                 </a>
