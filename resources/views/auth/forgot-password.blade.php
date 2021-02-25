@@ -18,7 +18,10 @@
             @endif
 
             <div class="card">
-                <x-card.header title="{{ __('Forgot password') }}" />
+                <x-card.header
+                    title="{{ __('Forgot password') }}"
+                    icon="heroicon-o-lock-closed"
+                />
 
                 <div class="card-content">
                     <form method="post" action="{{ route('password.email') }}" class="form">

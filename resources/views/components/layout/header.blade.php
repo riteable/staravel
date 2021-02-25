@@ -1,11 +1,11 @@
 <header class="page-header">
-    <x-layout.container padding="3">
+    <x-layout.container padding="0">
         <nav class="navbar">
             <div class="navbar-brand">
                 <a href="/" class="navbar-item has-icon-left">
-                    <x-icon name="heroicon-s-beaker" size="24" />
+                    <x-icon name="heroicon-s-beaker" size="24" class="has-text-grey-dark" />
 
-                    <span class="is-uppercase has-text-weight-bold">
+                    <span class="has-text-light is-uppercase has-text-weight-bold">
                         {{ config('app.name') }}
                     </span>
                 </a>

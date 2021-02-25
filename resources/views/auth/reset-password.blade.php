@@ -4,7 +4,10 @@
     <x-layout.container>
         <x-layout.compact>
             <div class="card">
-                <x-card.header title="{{ __('Reset password') }}" />
+                <x-card.header
+                    title="{{ __('Reset password') }}"
+                    icon="heroicon-o-lock-open"
+                />
 
                 <div class="card-content">
                     <form method="post" action="{{ route('password.update') }}" class="form">

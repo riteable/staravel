@@ -8,7 +8,10 @@
             @endif
 
             <div class="card">
-                <x-card.header title="{{ __('Edit profile') }}" />
+                <x-card.header
+                    title="{{ __('Edit profile') }}"
+                    icon="heroicon-s-pencil-alt"
+                />
 
                 <div class="card-content">
                     <form method="post" action="{{ route('user-profile-information.update') }}" class="form">

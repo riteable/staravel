@@ -11,6 +11,10 @@
                 <p class="subtitle">
                     Let this be the start of something beautiful.
                 </p>
+
+                <a href="https://github.com/riteable/larawire" target="_blank" class="button">
+                    Source @ Github
+                </a>
             </div>
         </x-layout.compact>
     </x-layout.container>

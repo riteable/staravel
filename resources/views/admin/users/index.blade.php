@@ -6,20 +6,18 @@
             @foreach ($users as $user)
                 <x-layout.column context="list">
                     <div class="card">
-                        <x-card.header>
-                            @if ($user->isAdmin())
-                                <x-icon name="heroicon-s-user" />
-                            @else
-                                <x-icon name="heroicon-o-user" />
-                            @endif
-
+                        <x-card.header :icon="$user->isAdmin() ? 'heroicon-s-user' : 'heroicon-o-user'">
                             {{ $user->name }}
                         </x-card.header>
 
-                        <div class="card-content">
-                            <div title="{{ $user->created_at }}">
+                        <div class="card-content content">
+                            <p>
+                                {{ $user->email }}
+                            </p>
+
+                            <p title="{{ $user->created_at }}" class="has-text-muted">
                                 {{ __('Created :timestamp', ['timestamp' => $user->created_at->diffForHumans()]) }}
-                            </div>
+                            </p>
                         </div>
                     </div>
                 </x-layout.column>

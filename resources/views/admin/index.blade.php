@@ -17,7 +17,10 @@
         <div class="columns">
             <x-layout.column context="list">
                 <div class="card">
-                    <x-card.header title="{{ __('Users') }}" />
+                    <x-card.header
+                        title="{{ __('Users') }}"
+                        icon="heroicon-o-user"
+                    />
 
                     <div class="card-content">
                         <a href="{{ route('admin.users.index') }}">

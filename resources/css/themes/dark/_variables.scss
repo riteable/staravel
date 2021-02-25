@@ -1,14 +1,21 @@
-$black: hsl(0, 0%, 5%);
-$black-bis: hsl(0, 0%, 10%);
-$black-ter: hsl(0, 0%, 15%);
+$black: hsl(0, 0%, 3%);
+$black-bis: hsl(0, 0%, 5%);
+$black-ter: hsl(0, 0%, 12%);
 
 $white: hsl(0, 0%, 100%);
 $white-bis: hsl(0, 0%, 95%);
 $white-ter: hsl(0, 0%, 90%);
 
+$grey-lightest: hsl(0, 0%, 80%);
+$grey-lighter: hsl(0, 0%, 70%);
+$grey-light: hsl(0, 0%, 60%);
 $grey: hsl(0, 0%, 50%);
 $grey-dark: hsl(0, 0%, 30%);
 $grey-darker: hsl(0, 0%, 20%);
+
+$blue: hsl(202, 83%, 45%);
+$primary: $blue;
+$danger: hsl(348, 68%, 30%);
 
 $text: $white-ter;
 $text-strong: $text;
@@ -26,3 +33,16 @@ $scheme-invert-ter: $white-ter;
 $border: $grey-dark;
 $link-hover: $white;
 $link-hover-border: $grey;
+$link-focus: $white-bis;
+$link-focus-border: $grey-light;
+$link-active: $white-bis;
+$link-active-border: $grey-lighter;
+
+$card-background-color: $black-bis;
+$card-shadow: 0 0.5em 1em -0.125em rgba(0, 0, 0, 1);
+$card-header-color: $grey;
+$card-header-shadow: none;
+$card-header-padding: 1rem 1.25rem;
+$card-content-padding: 1.25rem;
+
+$label-weight: 400;

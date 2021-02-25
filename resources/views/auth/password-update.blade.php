@@ -11,7 +11,10 @@
             @endif
 
             <div class="card">
-                <x-card.header title="{{ __('Update password') }}" />
+                <x-card.header
+                    title="{{ __('Update password') }}"
+                    icon="heroicon-o-lock-closed"
+                />
 
                 <div class="card-content">
                     <form method="post" action="{{ route('user-password.update') }}" class="form">

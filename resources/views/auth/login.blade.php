@@ -3,10 +3,17 @@
 @section('content')
     <x-layout.container>
         <x-layout.compact>
-            <x-alert :message="$errors->first()" type="error" class="mb-2" />
+            <x-alert
+                :message="$errors->first()"
+                type="is-danger"
+                class="mb-2"
+            />
 
             <div class="card">
-                <x-card.header title="{{ __('Login') }}" />
+                <x-card.header
+                    title="{{ __('Login') }}"
+                    icon="heroicon-o-login"
+                />
 
                 <div class="card-content">
                     <form method="post" action="{{ route('login') }}" class="form">
@@ -71,7 +78,7 @@
                 </div>
             </div>
 
-            <div class="mt-2">
+            <div class="mt-4">
                 {{ __('Not registered?') }}
 
                 <a href="{{ route('register') }}">

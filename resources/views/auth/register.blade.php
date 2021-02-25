@@ -4,7 +4,10 @@
     <x-layout.container>
         <x-layout.compact>
             <div class="card">
-                <x-card.header title="{{ __('Register') }}" />
+                <x-card.header
+                    title="{{ __('Register') }}"
+                    icon="heroicon-s-pencil-alt"
+                />
 
                 <div class="card-content">
                     <form method="post" action="{{ route('register') }}" class="form">
@@ -94,7 +97,7 @@
                 </div>
             </div>
 
-            <div class="mt-2">
+            <div class="mt-4">
                 {{ __('Already registered?') }}
 
                 <a href="{{ route('login') }}">
