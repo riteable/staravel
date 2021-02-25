@@ -4,26 +4,26 @@
     <x-layout.container>
         <x-layout.compact>
             @if (session('status') === 'verification-link-sent')
-                <x-alert message="{{ __('A new email verification link has been emailed to you!') }}" type="success" />
+                <x-alert
+                    message="{{ __('A new email verification link has been emailed to you!') }}"
+                    type="is-success"
+                    class="mb-2"
+                />
             @endif
 
-            <div class="text-center">
-                <x-heroicon-s-mail class="icon icon-48" />
+            <div class="has-text-centered">
+                <x-icon name="heroicon-s-mail" size="48" />
 
                 <h2 class="title">
                     {{ __('Verify email') }}
                 </h2>
 
-                <p class="subtitle">
-                    {{ __('Just one more little thing') }}
-                </p>
-
-                <p>
+                <p class="mb-4">
                     {{ __('Click the link in the email we\'ve just sent you to verify your email address.') }}
                 </p>
 
-                <div class="d-flex justify-center">
-                    <a href="/" class="btn btn-primary">
+                <div class="is-flex is-justify-content-center">
+                    <a href="/" class="button is-primary">
                         {{ __('Return home') }}
                     </a>
 

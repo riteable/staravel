@@ -1,7 +1,11 @@
 @props([
     'disabled' => false,
-    'checked' => false
+    'checked' => false,
+    'text' => null
 ])
 
-<input type="checkbox" {{ $disabled ? 'disabled' : '' }} {{ $checked ? 'checked' : '' }} {{ $attributes->merge(['value' => '1']) }}>
-<span class="form-icon"></span>
+<label class="checkbox">
+    <input type="checkbox" {{ $disabled ? 'disabled' : '' }} {{ $checked ? 'checked' : '' }} {{ $attributes->merge(['value' => '1']) }}>
+
+    {{ $text ?? $slot }}
+</label>

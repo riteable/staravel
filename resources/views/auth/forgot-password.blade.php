@@ -3,23 +3,28 @@
 @section('content')
     <x-layout.container>
         <x-layout.compact>
-            <x-alert :message="$errors->first()" type="error" class="mb-2" />
+            <x-alert
+                :message="$errors->first()"
+                type="error"
+                class="mb-2"
+            />
 
             @if (session('status'))
-              <x-alert message="{{ session('status') }}" type="success" class="mb-2" />
+                <x-alert
+                    message="{{ session('status') }}"
+                    type="is-success"
+                    class="mb-2"
+                />
             @endif
 
             <div class="card">
-                <x-card.header
-                    title="{{ __('Forgot password') }}"
-                    subtitle="{{ __('Request a link to reset your password') }}"
-                />
+                <x-card.header title="{{ __('Forgot password') }}" />
 
-                <div class="card-body">
-                    <form method="post" action="{{ route('password.email') }}">
+                <div class="card-content">
+                    <form method="post" action="{{ route('password.email') }}" class="form">
                         @csrf
 
-                        <div class="form-group">
+                        <div class="field">
                             <x-form.label
                                 text="{{ __('Email') }}"
                                 for="form-email"
@@ -37,7 +42,10 @@
                             />
                         </div>
 
-                        <x-button text="{{ __('Send reset link') }}" />
+                        <x-button
+                            text="{{ __('Send reset link') }}"
+                            class="is-primary"
+                        />
                     </form>
                 </div>
             </div>

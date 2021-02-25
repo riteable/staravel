@@ -1,51 +1,67 @@
-<header class="bg-secondary">
+<header class="page-header">
     <x-layout.container padding="3">
         <nav class="navbar">
-            <div class="navbar-section">
-                <a href="/" class="text-bold text-uppercase text-decoration-none">
-                    <span class="text-large">
-                        <x-heroicon-s-beaker class="icon icon-24" />
+            <div class="navbar-brand">
+                <a href="/" class="navbar-item has-icon-left">
+                    <x-icon name="heroicon-s-beaker" size="24" />
+
+                    <span class="is-uppercase has-text-weight-bold">
+                        {{ config('app.name') }}
                     </span>
-                    {{ config('app.name') }}
+                </a>
+
+                <a role="button" class="navbar-burger" data-target="main-menu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
                 </a>
             </div>
 
-            <div class="navbar-section">
-                @auth
-                    <a href="{{ route('dashboard') }}" class="btn btn-link">
-                        <x-heroicon-s-user class="icon icon-24" />
-                    </a>
+            <div id="main-menu" class="navbar-menu">
+                <div class="navbar-end">
+                        @auth
+                            <div class="navbar-item">
+                                <div>
+                                    <a href="{{ route('dashboard') }}" class="button">
+                                        <x-icon name="heroicon-s-user" size="24" />
+                                    </a>
 
-                    @role('admin')
-                        <a href="{{ route('admin.index') }}" class="btn btn-link">
-                            <x-heroicon-s-lock-closed class="icon icon-24" />
-                        </a>
-                    @endrole
+                                    @role('admin')
+                                        <a href="{{ route('admin.index') }}" class="button">
+                                            <x-icon name="heroicon-s-lock-closed" size="24" />
+                                        </a>
+                                    @endrole
+                                </div>
+                            </div>
 
-                    <form method="post" action="{{ route('logout') }}" class="ml-1">
-                        @csrf
+                            <div class="navbar-item">
+                                <form method="post" action="{{ route('logout') }}">
+                                    @csrf
 
-                        <button class="btn btn-link has-icon-left">
-                            <x-heroicon-o-logout class="icon icon-24" />
+                                    <button class="button">
+                                        {{ __('Logout') }}
+                                    </button>
+                                </form>
+                            </div>
+                        @endauth
 
-                            {{ __('Logout') }}
-                        </button>
-                    </form>
-                @endauth
+                        @guest
+                            <div class="navbar-item">
+                                <div>
+                                    <a href="{{ route('login') }}" class="button">
+                                        {{ __('Login') }}
+                                    </a>
 
-                @guest
-                    <div>
-                        <a href="{{ route('login') }}" class="btn btn-link">
-                            {{ __('Login') }}
-                        </a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="btn btn-primary">
-                                {{ __('Register') }}
-                            </a>
-                        @endif
+                                    @if (Route::has('register'))
+                                        <a href="{{ route('register') }}" class="button is-primary">
+                                            {{ __('Register') }}
+                                        </a>
+                                    @endif
+                                </div>
+                            </div>
+                        @endguest
                     </div>
-                @endguest
+                </div>
             </div>
         </nav>
     </x-layout.container>

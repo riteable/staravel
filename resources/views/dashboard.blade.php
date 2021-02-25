@@ -3,7 +3,7 @@
 @section('content')
     <x-layout.container>
         <x-layout.compact>
-            <div class="text-center">
+            <div class="has-text-centered">
                 <h2 class="title">
                     Hi, {{ auth()->user()->name }}!
                 </h2>
@@ -12,11 +12,11 @@
                     How are you?
                 </p>
 
-                <a href="{{ route('user-profile-information.edit') }}" class="btn">
+                <a href="{{ route('user-profile-information.edit') }}" class="button">
                     {{ __('Edit profile') }}
                 </a>
 
-                <a href="{{ route('user-password.edit') }}" class="btn">
+                <a href="{{ route('user-password.edit') }}" class="button">
                     {{ __('Update password') }}
                 </a>
             </div>

@@ -1,6 +1,6 @@
 <div class="border-top">
     <x-layout.container padding="10">
-        <div class="text-gray text-center text-small">
+        <div class="has-text-muted has-text-centered is-size-7">
             {{ __('Copyright © :year - :app_name', [
                 'year' => date('Y'),
                 'app_name' => config('app.name')

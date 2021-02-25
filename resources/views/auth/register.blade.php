@@ -4,17 +4,17 @@
     <x-layout.container>
         <x-layout.compact>
             <div class="card">
-                <x-card.header
-                    title="{{ __('Register') }}"
-                    subtitle="{{ __('Sign up for a new account') }}"
-                />
+                <x-card.header title="{{ __('Register') }}" />
 
-                <div class="card-body">
-                    <form method="post" action="{{ route('register') }}">
+                <div class="card-content">
+                    <form method="post" action="{{ route('register') }}" class="form">
                         @csrf
 
-                        <div class="form-group">
-                            <x-form.label text="{{ __('Name') }}" for="form-name" />
+                        <div class="field">
+                            <x-form.label
+                                text="{{ __('Name') }}"
+                                for="form-name"
+                            />
 
                             <x-form.input
                                 id="form-name"
@@ -31,7 +31,7 @@
                             <x-form.validation-message field="name" />
                         </div>
 
-                        <div class="form-group">
+                        <div class="field">
                             <x-form.label
                                 text="{{ __('Email') }}"
                                 for="form-email"
@@ -51,7 +51,7 @@
                             <x-form.validation-message field="email" />
                         </div>
 
-                        <div class="form-group">
+                        <div class="field">
                             <x-form.label
                                 text="{{ __('Password') }}"
                                 for="form-password"
@@ -70,7 +70,7 @@
                             <x-form.validation-message field="password" />
                         </div>
 
-                        <div class="form-group">
+                        <div class="field">
                             <x-form.label
                                 text="{{ __('Password confirmation') }}"
                                 for="form-password-confirmation"
@@ -86,17 +86,20 @@
                             />
                         </div>
 
-                        <x-button text="{{ __('Sign up') }}" />
+                        <x-button
+                            text="{{ __('Sign up') }}"
+                            class="is-primary"
+                        />
                     </form>
                 </div>
+            </div>
 
-                <div class="card-footer">
-                    {{ __('Already registered?') }}
+            <div class="mt-2">
+                {{ __('Already registered?') }}
 
-                    <a href="{{ route('login') }}">
-                        {{ __('Login') }}
-                    </a>
-                </div>
+                <a href="{{ route('login') }}">
+                    {{ __('Login') }}
+                </a>
             </div>
         </x-layout.compact>
     </x-layout.container>

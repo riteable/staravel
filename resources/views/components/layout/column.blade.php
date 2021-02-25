@@ -4,7 +4,7 @@
 
 @if ($context === 'list')
     @php
-        $attributes = $attributes->merge(['class' => 'col-xs-12 col-sm-6 col-md-4 col-3'])
+        $attributes = $attributes->merge(['class' => 'is-full is-half is-one-third is-one-quarter'])
     @endphp
 @endif
 

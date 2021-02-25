@@ -6,16 +6,13 @@
             <x-alert :message="$errors->first()" type="error" class="mb-2" />
 
             <div class="card">
-                <x-card.header
-                    title="{{ __('Login') }}"
-                    subtitle="{{ __('Sign in with an existing account') }}"
-                />
+                <x-card.header title="{{ __('Login') }}" />
 
-                <div class="card-body">
-                    <form method="post" action="{{ route('login') }}">
+                <div class="card-content">
+                    <form method="post" action="{{ route('login') }}" class="form">
                         @csrf
 
-                        <div class="form-group">
+                        <div class="field">
                             <x-form.label
                                 text="{{ __('Email') }}"
                                 for="form-email"
@@ -32,18 +29,16 @@
                             />
                         </div>
 
-                        <div class="form-group">
-                            <div class="d-flex space-between">
+                        <div class="field">
+                            <div class="is-flex is-justify-content-space-between">
                                 <x-form.label
                                     text="{{ __('Password') }}"
                                     for="form-password"
                                 />
 
-                                <div>
-                                    <a href="/forgot-password">
-                                        {{ __('Forgot password?') }}
-                                    </a>
-                                </div>
+                                <a href="/forgot-password">
+                                    {{ __('Forgot password?') }}
+                                </a>
                             </div>
 
                             <x-form.input
@@ -56,7 +51,7 @@
                             />
                         </div>
 
-                        <div class="form-group">
+                        <div class="field">
                             <x-form.label>
                                 <x-form.checkbox
                                     id="form-remember"
@@ -68,17 +63,20 @@
                             </x-form.label>
                         </div>
 
-                        <x-button text="{{ __('Login') }}" />
+                        <x-button
+                            text="{{ __('Login') }}"
+                            class="is-primary"
+                        />
                     </form>
                 </div>
+            </div>
 
-                <div class="card-footer">
-                    {{ __('Not registered?') }}
+            <div class="mt-2">
+                {{ __('Not registered?') }}
 
-                    <a href="{{ route('register') }}">
-                        {{ __('Register') }}
-                    </a>
-                </div>
+                <a href="{{ route('register') }}">
+                    {{ __('Register') }}
+                </a>
             </div>
         </x-layout.compact>
     </x-layout.container>

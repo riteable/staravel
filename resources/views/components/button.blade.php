@@ -1,5 +1,5 @@
 @props(['text'])
 
-<button {{ $attributes->merge(['class' => 'btn']) }}>
+<button {{ $attributes->merge(['class' => 'button']) }}>
     {{ $text ?? $slot }}
 </button>

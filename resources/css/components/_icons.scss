@@ -1,0 +1,18 @@
+@each $key, $size in $icon-sizes {
+    .icon-#{$key} {
+        width: $size;
+        height: $size;
+    }
+}
+
+.has-icon-left {
+    > .icon {
+        margin-right: 0.25em !important;
+    }
+}
+
+.has-icon-right {
+    > .icon {
+        margin-left: 0.25em !important;
+    }
+}

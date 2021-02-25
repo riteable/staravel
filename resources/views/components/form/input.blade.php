@@ -4,7 +4,7 @@
 ])
 
 @if ($hasErrors)
-    @php $attributes = $attributes->merge(['class' => 'is-error']) @endphp
+    @php $attributes = $attributes->merge(['class' => 'is-danger']) @endphp
 @endif
 
-<input {{ $disabled ? 'disabled' : '' }} {{ $attributes->merge(['class' => 'form-input']) }}>
+<input {{ $disabled ? 'disabled' : '' }} {{ $attributes->merge(['class' => 'input']) }}>

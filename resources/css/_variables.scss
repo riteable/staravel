@@ -1,29 +1,8 @@
-@import "~spectre.css/src/variables";
+// Bulma variables
 
-// Spectre.css variables
-
-$base-font-family: 'Noto Sans JP', sans-serif;
-
-$font-size: 0.7rem;
-$font-size-sm: 0.6rem;
-
-$control-padding-x: $unit-3;
+$family-sans-serif: "Open Sans", sans-serif;
 
 // Custom variables
-
-$directions: (
-    'top',
-    'right',
-    'bottom',
-    'left'
-);
-
-$corners: (
-    'top-left',
-    'top-right',
-    'bottom-right',
-    'bottom-left'
-);
 
 $icon-sizes: (
     '12': 12px,

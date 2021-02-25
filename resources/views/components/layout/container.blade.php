@@ -1,10 +1,9 @@
 @props([
-    'size' => 'xl',
-    'padding' => '5'
+    'padding' => 6
 ])
 
 @php
-    $attributes = $attributes->merge(['class' => "grid-{$size} py-{$padding}"])
+    $attributes = $attributes->merge(['class' => "py-{$padding}"]);
 @endphp
 
 <div {{ $attributes->merge(['class' => 'container']) }}>

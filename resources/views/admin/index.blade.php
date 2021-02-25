@@ -3,7 +3,7 @@
 @section('content')
     <x-layout.container>
         <x-layout.compact>
-            <div class="text-center">
+            <div class="has-text-centered">
                 <h2 class="title">
                     {{ __('Admin') }}
                 </h2>
@@ -17,9 +17,9 @@
         <div class="columns">
             <x-layout.column context="list">
                 <div class="card">
-                    <x-card.header title="{{ __('Users') }}" subtitle="{{ __('Manage your users') }}" />
+                    <x-card.header title="{{ __('Users') }}" />
 
-                    <div class="card-body">
+                    <div class="card-content">
                         <a href="{{ route('admin.users.index') }}">
                             {{ __('Index') }}
                         </a>

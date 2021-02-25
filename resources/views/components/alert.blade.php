@@ -4,11 +4,11 @@
 ])
 
 @if ($type)
-    @php $attributes = $attributes->merge(['class' => "toast-{$type}"]) @endphp
+    @php $attributes = $attributes->merge(['class' => $type]) @endphp
 @endif
 
 @if ($message)
-    <div {{ $attributes->merge(['class' => 'toast']) }}>
+    <div {{ $attributes->merge(['class' => 'notification']) }}>
         {{ $message ?? $slot }}
     </div>
 @endif

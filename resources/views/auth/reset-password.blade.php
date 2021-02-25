@@ -4,13 +4,10 @@
     <x-layout.container>
         <x-layout.compact>
             <div class="card">
-                <x-card.header
-                    title="{{ __('Reset password') }}"
-                    subtitle="{{ __('Set a new password') }}"
-                />
+                <x-card.header title="{{ __('Reset password') }}" />
 
-                <div class="card-body">
-                    <form method="post" action="{{ route('password.update') }}">
+                <div class="card-content">
+                    <form method="post" action="{{ route('password.update') }}" class="form">
                         @csrf
 
                         <x-form.input
@@ -19,7 +16,7 @@
                             value="{{ $request->route('token') }}"
                         />
 
-                        <div class="form-group">
+                        <div class="field">
                             <x-form.label
                                 text="{{ __('Email') }}"
                                 for="form-email"
@@ -39,7 +36,7 @@
                             <x-form.validation-message field="email" />
                         </div>
 
-                        <div class="form-group">
+                        <div class="field">
                             <x-form.label
                                 text="{{ __('Password') }}"
                                 for="form-password"
@@ -58,7 +55,7 @@
                             <x-form.validation-message field="password" />
                         </div>
 
-                        <div class="form-group">
+                        <div class="field">
                             <x-form.label
                                 text="{{ __('Password confirmation') }}"
                                 for="form-password-confirmation"
@@ -74,7 +71,10 @@
                             />
                         </div>
 
-                        <x-button text="{{ __('Reset password') }}" />
+                        <x-button
+                            text="{{ __('Reset password') }}"
+                            class="is-primary"
+                        />
                     </form>
                 </div>
             </div>

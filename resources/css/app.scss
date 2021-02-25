@@ -1,11 +1,10 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
 @import "variables";
-@import "spectre";
-@import "icons";
-@import "titles";
-@import "buttons";
-@import "cards";
-@import "forms";
-@import "utilities/borders";
-@import "utilities/position";
-@import "utilities/text";
-@import "utilities/flex";
+@import "framework";
+@import "components/icons";
+
+@import "helpers/color";
+@import "helpers/typography";

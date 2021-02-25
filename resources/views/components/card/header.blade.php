@@ -1,16 +1,9 @@
 @props([
-    'title' => null,
-    'subtitle' => null
+    'title' => null
 ])
 
 <header class="card-header">
-    <h2 class="title">
+    <h2 class="card-header-title">
         {{ $title ?? $slot }}
     </h2>
-
-    @if (!empty($subtitle))
-        <p class="subtitle">
-            {{ $subtitle }}
-        </p>
-    @endif
 </header>

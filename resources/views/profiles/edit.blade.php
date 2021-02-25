@@ -8,18 +8,15 @@
             @endif
 
             <div class="card">
-                <x-card.header
-                    title="{{ __('Edit profile') }}"
-                    subtitle="{{ __('Update your profile information') }}"
-                />
+                <x-card.header title="{{ __('Edit profile') }}" />
 
-                <div class="card-body">
-                    <form method="post" action="{{ route('user-profile-information.update') }}">
+                <div class="card-content">
+                    <form method="post" action="{{ route('user-profile-information.update') }}" class="form">
                         @csrf
 
                         {{ method_field('put') }}
 
-                        <div class="form-group">
+                        <div class="field">
                             <x-form.label
                                 for="form-email"
                                 text="{{ __('Email') }}"
@@ -41,7 +38,10 @@
                             />
                         </div>
 
-                        <x-button text="{{ __('Update') }}" />
+                        <x-button
+                            text="{{ __('Update') }}"
+                            class="is-primary"
+                        />
                     </form>
                 </div>
             </div>

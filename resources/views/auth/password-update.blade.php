@@ -6,24 +6,20 @@
             @if (session('status') === 'password-updated')
                 <x-alert
                     message="{{ __('Your password has been updated!') }}"
-                    type="success"
-                    class="mb-2"
+                    type="is-success"
                 />
             @endif
 
             <div class="card">
-                <x-card.header
-                    title="{{ __('Update password') }}"
-                    subtitle="{{ __('Set a new password') }}"
-                />
+                <x-card.header title="{{ __('Update password') }}" />
 
-                <div class="card-body">
-                    <form method="post" action="{{ route('user-password.update') }}">
+                <div class="card-content">
+                    <form method="post" action="{{ route('user-password.update') }}" class="form">
                         @csrf
 
                         {{ method_field('put') }}
 
-                        <div class="form-group">
+                        <div class="field">
                             <x-form.label
                                 for="form-current-password"
                                 text="{{ __('Current password') }}"
@@ -45,7 +41,7 @@
                             />
                         </div>
 
-                        <div class="form-group">
+                        <div class="field">
                             <x-form.label
                                 for="form-password"
                                 text="{{ __('New password') }}"
@@ -67,7 +63,7 @@
                             />
                         </div>
 
-                        <div class="form-group">
+                        <div class="field">
                             <x-form.label
                                 for="form-password-confirmation"
                                 text="{{ __('New password confirmation') }}"
@@ -83,7 +79,10 @@
                             />
                         </div>
 
-                        <x-button text="{{ __('Update') }}" />
+                        <x-button
+                            text="{{ __('Update') }}"
+                            class="is-primary"
+                        />
                     </form>
                 </div>
             </div>
