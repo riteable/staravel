@@ -3,6 +3,7 @@ const { WebpackManifestPlugin } = require('webpack-manifest-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const WebpackPwaManifest = require('webpack-pwa-manifest')
+const project = require('./project')
 
 module.exports = {
   entry: {
@@ -50,9 +51,9 @@ module.exports = {
     }),
     new WebpackPwaManifest({
       filename: 'web-manifest.json',
-      name: 'Larawire',
-      short_name: 'Larawire',
-      description: 'A basic Laravel + Livewire project template.',
+      name: project.appName,
+      short_name: project.appName,
+      description: project.description,
       background_color: '#ffffff',
       icons: [
         {
