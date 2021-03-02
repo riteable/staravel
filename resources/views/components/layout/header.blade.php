@@ -10,7 +10,7 @@
                     </span>
                 </a>
 
-                <a role="button" class="navbar-burger" data-target="main-menu">
+                <a x-data="mainMenuToggle()" @click="toggle()" role="button" class="navbar-burger" :class="{ 'is-active': isActive }">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
