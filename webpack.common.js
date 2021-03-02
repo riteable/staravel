@@ -3,7 +3,7 @@ const { WebpackManifestPlugin } = require('webpack-manifest-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const WebpackPwaManifest = require('webpack-pwa-manifest')
-const projectMeta = require('./resources/js/vendor/project-meta')
+const projectMeta = require('@riteable/project-meta')
 
 const meta = projectMeta({ sass: './resources/css/_variables.scss' })
 
@@ -56,7 +56,8 @@ module.exports = {
       name: meta.env.appName,
       short_name: meta.env.appName,
       description: meta.package.description,
-      background_color: meta.sass.$schemeMain.value.hex,
+      theme_color: meta.sass.primary.hex,
+      background_color: meta.sass.schemeMain.hex,
       icons: [
         {
           src: path.resolve('resources/img/icon.png'),
