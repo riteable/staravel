@@ -1,4 +1,8 @@
-@props(['default', 'alt', 'preferred'])
+@props([
+    'default',
+    'alt',
+    'preferred'
+])
 
 @php
     if ($preferred && $default !== $preferred) {
@@ -6,4 +10,4 @@
     }
 @endphp
 
-<link rel="stylesheet" href="{{ $default }}" id="stylesheet-theme" data-alt="{{ $alt }}">
+<link rel="stylesheet" href="{{ $default }}" data-alt="{{ $alt }}" {{ $attributes }}>

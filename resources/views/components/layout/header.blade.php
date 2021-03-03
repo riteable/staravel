@@ -32,7 +32,14 @@
                                 @endrole
                             @endauth
 
-                            <x-button x-data="{}" x-init="$store.theme.init({ cookie: '{{ config('theme.cookie') }}' })" @click="$store.theme.toggle()">
+                            <x-button
+                                x-data="{}"
+                                x-init="$store.theme.init({
+                                    id: 'stylesheet-theme',
+                                    cookie: '{{ config('theme.cookie') }}'
+                                })"
+                                @click="$store.theme.toggle()"
+                            >
                                 <x-icon name="heroicon-s-moon" size="24" />
                             </x-button>
                         </div>

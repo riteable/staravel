@@ -14,9 +14,11 @@ COPY resources/js resources/js
 COPY resources/img resources/img
 COPY webpack.common.js .
 COPY webpack.prod.js .
+COPY .env .
 
 RUN npm run prod
 
+RUN rm .env
 
 # Stage: PHP app
 

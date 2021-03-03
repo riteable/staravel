@@ -11,13 +11,22 @@ window.Spruce.store('menu', {
 })
 
 window.Spruce.store('theme', {
+  id: null,
   cookie: 'theme',
   current: null,
   alt: null,
   el () {
-    return document.getElementById('stylesheet-theme')
+    if (!this.id) {
+      throw new Error('ID not specified.')
+    }
+
+    return document.getElementById(this.id)
   },
   init (data = {}) {
+    if (data.id) {
+      this.id = data.id
+    }
+
     if (data.cookie) {
       this.cookie = data.cookie
     }
