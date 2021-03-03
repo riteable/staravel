@@ -1,13 +1,11 @@
-@props([
-    'default',
-    'alt',
-    'preferred'
-])
+@props(['default', 'preferred'])
 
 @php
-    if ($preferred && $default !== $preferred) {
-        [$default, $alt] = [$alt, $default];
+    $theme = $default;
+
+    if ($preferred && $theme !== $preferred) {
+        $theme = $preferred;
     }
 @endphp
 
-<link rel="stylesheet" href="{{ $default }}" data-alt="{{ $alt }}" {{ $attributes }}>
+<link rel="stylesheet" href="{{ $theme }}" {{ $attributes }}>

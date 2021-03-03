@@ -17,7 +17,6 @@
         <x-theme
             id="stylesheet-theme"
             default="{{ manifest_get('theme-light.css', 'assets-manifest.json') }}"
-            alt="{{ manifest_get('theme-dark.css', 'assets-manifest.json') }}"
             preferred="{{ request()->cookie(config('theme.cookie')) }}"
         />
 
