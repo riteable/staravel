@@ -18,9 +18,9 @@
 
         <div x-data id="main-menu" class="navbar-menu" :class="{ 'is-active': $store.menu.isActive }">
             <div class="navbar-end">
-                    @auth
-                        <div class="navbar-item">
-                            <div>
+                    <div class="navbar-item">
+                        <div>
+                            @auth
                                 <a href="{{ route('dashboard') }}" class="button">
                                     <x-icon name="heroicon-s-user" size="24" />
                                 </a>
@@ -30,36 +30,40 @@
                                         <x-icon name="heroicon-s-lock-closed" size="24" />
                                     </a>
                                 @endrole
-                            </div>
+                            @endauth
+
+                            <x-button x-data="{}" x-init="$store.theme.init()" @click="$store.theme.toggle()">
+                                <x-icon name="heroicon-s-moon" size="24" />
+                            </x-button>
                         </div>
+                    </div>
+                @auth
+                    <div class="navbar-item">
+                        <form method="post" action="{{ route('logout') }}">
+                            @csrf
 
-                        <div class="navbar-item">
-                            <form method="post" action="{{ route('logout') }}">
-                                @csrf
+                            <button class="button">
+                                {{ __('Logout') }}
+                            </button>
+                        </form>
+                    </div>
+                @endauth
 
-                                <button class="button">
-                                    {{ __('Logout') }}
-                                </button>
-                            </form>
-                        </div>
-                    @endauth
+                @guest
+                    <div class="navbar-item">
+                        <div>
+                            <a href="{{ route('login') }}" class="button">
+                                {{ __('Login') }}
+                            </a>
 
-                    @guest
-                        <div class="navbar-item">
-                            <div>
-                                <a href="{{ route('login') }}" class="button">
-                                    {{ __('Login') }}
+                            @if (Route::has('register'))
+                                <a href="{{ route('register') }}" class="button is-primary">
+                                    {{ __('Register') }}
                                 </a>
-
-                                @if (Route::has('register'))
-                                    <a href="{{ route('register') }}" class="button is-primary">
-                                        {{ __('Register') }}
-                                    </a>
-                                @endif
-                            </div>
+                            @endif
                         </div>
-                    @endguest
-                </div>
+                    </div>
+                @endguest
             </div>
         </div>
     </nav>

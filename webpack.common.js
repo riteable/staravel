@@ -3,16 +3,19 @@ const { WebpackManifestPlugin } = require('webpack-manifest-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const WebpackPwaManifest = require('webpack-pwa-manifest')
+const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts')
 const projectMeta = require('@riteable/project-meta')
 
-const meta = projectMeta({ sass: './resources/css/_variables.scss' })
+const meta = projectMeta({ sass: './resources/css/themes/_dark.scss' })
 
 module.exports = {
   entry: {
-    app: ['./resources/js/app.js', './resources/css/app.scss'],
+    app: './resources/js/app.js',
     vendor: [
       './resources/js/vendor/livewire/livewire.js'
-    ]
+    ],
+    'theme-light': './resources/css/theme-light.scss',
+    'theme-dark': './resources/css/theme-dark.scss'
   },
   output: {
     path: path.resolve(__dirname, 'public'),
@@ -50,6 +53,7 @@ module.exports = {
     new CleanWebpackPlugin({
       cleanOnceBeforeBuildPatterns: ['js/*', 'css/*']
     }),
+    new RemoveEmptyScriptsPlugin(),
     new WebpackManifestPlugin({
       fileName: 'assets-manifest.json'
     }),

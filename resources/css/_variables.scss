@@ -1,9 +1,8 @@
-// Theme variables
-@import "themes/dark/variables";
+// Bulma variables shared by all themes
 
-// Bulma variables
+$family-sans-serif: "Open Sans", sans-serif !default;
 
-$family-sans-serif: "Open Sans", sans-serif;
+$card-header-shadow: none !default;
 
 // Custom variables
 
@@ -14,4 +13,4 @@ $icon-sizes: (
     "32": 32px,
     "48": 48px,
     "64": 64px
-);
+) !default;
