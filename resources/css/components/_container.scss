@@ -1,0 +1,6 @@
+@include until($tablet) {
+    .container {
+        padding-left: $gap / 2;
+        padding-right: $gap / 2;
+    }
+}
