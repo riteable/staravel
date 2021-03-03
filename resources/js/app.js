@@ -11,13 +11,17 @@ window.Spruce.store('menu', {
 })
 
 window.Spruce.store('theme', {
-  cookie: 'preferred-theme',
+  cookie: 'theme',
   current: null,
   alt: null,
   el () {
     return document.getElementById('stylesheet-theme')
   },
-  init () {
+  init (data = {}) {
+    if (data.cookie) {
+      this.cookie = data.cookie
+    }
+
     const preference = cookie.get(this.cookie)
     const el = this.el()
 
