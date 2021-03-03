@@ -10,14 +10,14 @@
                     </span>
                 </a>
 
-                <a x-data="mainMenuToggle()" @click="toggle()" role="button" class="navbar-burger" :class="{ 'is-active': isActive }">
+                <a x-data @click="$store.menu.toggle()" role="button" class="navbar-burger" :class="{ 'is-active': $store.menu.isActive }">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                 </a>
             </div>
 
-            <div id="main-menu" class="navbar-menu">
+            <div x-data id="main-menu" class="navbar-menu" :class="{ 'is-active': $store.menu.isActive }">
                 <div class="navbar-end">
                         @auth
                             <div class="navbar-item">

@@ -1,10 +1,9 @@
+import '@ryangjchandler/spruce'
 import 'alpinejs'
 
-window.mainMenuToggle = function () {
-  return {
-    isActive: false,
-    toggle () {
-      this.isActive = !this.isActive
-    }
+window.Spruce.store('menu', {
+  isActive: false,
+  toggle () {
+    this.isActive = !this.isActive
   }
-}
+})
