@@ -18,8 +18,6 @@ COPY .env .
 
 RUN npm run prod
 
-RUN rm .env
-
 # Stage: PHP app
 
 FROM webdevops/php-nginx:7.4
@@ -48,3 +46,6 @@ RUN composer install --optimize-autoloader --no-dev --prefer-dist --no-scripts &
 COPY --chown=1000:1000 . .
 COPY --chown=1000:1000 --from=builder /app/public/css public/css
 COPY --chown=1000:1000 --from=builder /app/public/js public/js
+COPY --chown=1000:1000 --from=builder /app/public/img public/img
+COPY --chown=1000:1000 --from=builder /app/public/assets-manifest.json public/assets-manifest.json
+COPY --chown=1000:1000 --from=builder /app/public/web-manifest.json public/web-manifest.json
