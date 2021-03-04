@@ -4,9 +4,10 @@ export default {
   options: {
     id: null,
     cookie: 'theme',
-    light: null,
-    dark: null
+    expires: 365
   },
+  light: null,
+  dark: null,
   current: null,
   el () {
     if (!this.options.id) {
@@ -21,15 +22,24 @@ export default {
     const el = this.el()
 
     this.current = el.getAttribute('href')
+    this.light = el.dataset.light
+    this.dark = el.dataset.dark
   },
   toggle () {
     const el = this.el()
+    let theme = null
 
-    this.current = this.current === this.options.light
-      ? this.options.dark
-      : this.options.light
+    if (this.current === this.light) {
+      this.current = this.dark
+      theme = 'dark'
+    } else {
+      this.current = this.light
+      theme = 'light'
+    }
 
     el.setAttribute('href', this.current)
-    cookie.set(this.options.cookie, this.current)
+    cookie.set(this.options.cookie, theme, {
+      expires: this.options.expires
+    })
   }
 }

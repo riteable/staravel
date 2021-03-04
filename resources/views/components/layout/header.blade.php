@@ -36,9 +36,7 @@
                                 x-data="{}"
                                 x-init="$store.theme.init({
                                     id: 'stylesheet-theme',
-                                    cookie: '{{ config('theme.cookie') }}',
-                                    light: '{{ manifest_get('theme-light.css', 'assets-manifest.json') }}',
-                                    dark: '{{ manifest_get('theme-dark.css', 'assets-manifest.json') }}'
+                                    cookie: '{{ config('theme.cookie') }}'
                                 })"
                                 @click="$store.theme.toggle()"
                             >

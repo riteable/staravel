@@ -1,11 +1,3 @@
-@props(['default', 'preferred'])
+@props(['light', 'dark', 'current'])
 
-@php
-    $theme = $default;
-
-    if ($preferred && $theme !== $preferred) {
-        $theme = $preferred;
-    }
-@endphp
-
-<link rel="stylesheet" href="{{ $theme }}" {{ $attributes }}>
+<link rel="stylesheet" href="{{ ${$current} }}" data-light="{{ $light }}" data-dark="{{ $dark }}" {{ $attributes }}>

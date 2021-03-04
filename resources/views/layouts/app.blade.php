@@ -16,8 +16,9 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap">
         <x-theme
             id="stylesheet-theme"
-            default="{{ manifest_get('theme-light.css', 'assets-manifest.json') }}"
-            preferred="{{ request()->cookie(config('theme.cookie')) }}"
+            light="{{ manifest_get('theme-light.css', 'assets-manifest.json') }}"
+            dark="{{ manifest_get('theme-dark.css', 'assets-manifest.json') }}"
+            current="{{ request()->cookie(config('theme.cookie')) ?? 'light' }}"
         />
 
         <script src="{{ manifest_get('vendor.js', 'assets-manifest.json') }}" defer></script>
