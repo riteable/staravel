@@ -3,58 +3,28 @@ version: "3.7"
 services:
   app:
     image: "${IMAGE}"
-    container_name: "${APP_ID}-app"
-    build: .
     user: "1000:1000"
-    ports:
-      - "${APP_PORT}:80"
     env_file:
       - .env
     environment:
       WEB_DOCUMENT_ROOT: /app/public
     labels:
       - "${APP_ID}.app"
-    volumes:
-      - ./storage:/app/storage:cached
-      - ./app:/app/app:cached
-      - ./bootstrap:/app/bootstrap:cached
-      - ./config:/app/config:cached
-      - ./database:/app/database:cached
-      - ./public:/app/public:cached
-      - ./resources:/app/resources:cached
-      - ./routes:/app/routes:cached
-      - ./tests:/app/tests:cached
-      - ./vendor:/app/vendor:cached
-      - ./node_modules:/app/node_modules:cached
-      - ./nginx-general.conf:/opt/docker/etc/nginx/vhost.common.d/10-general.conf
     healthcheck:
       test: curl -f http://localhost || exit 1
 
   worker:
     image: "${IMAGE}"
-    container_name: "${APP_ID}-worker"
-    build: .
     user: "1000:1000"
     env_file:
       - .env
     labels:
       - "${APP_ID}.worker"
-    volumes:
-      - ./storage:/app/storage:cached
-      - ./app:/app/app:cached
-      - ./bootstrap:/app/bootstrap:cached
-      - ./config:/app/config:cached
-      - ./resources/lang:/app/resources/lang:cached
-      - ./routes:/app/routes:cached
-      - ./vendor:/app/vendor:cached
     entrypoint: supervisord
     command: -c /app/supervisord.conf
 
   postgres:
     image: postgres:12.4
-    container_name: "${APP_ID}-postgres"
-    ports:
-      - "${DB_PORT}:5432"
     environment:
       POSTGRES_PASSWORD: "${DB_PASSWORD}"
       POSTGRES_DB: "${DB_DATABASE}"
@@ -64,22 +34,13 @@ services:
       - "${APP_ID}.db"
     volumes:
       - postgres:/var/lib/postgresql/data
-    healthcheck:
-      test: "pg_isready -p ${DB_PORT} -U ${DB_USERNAME}"
-    command: "-p ${DB_PORT}"
 
   redis:
     image: redis:6.0.8
-    container_name: "${APP_ID}-redis"
-    command: "--port ${REDIS_PORT}"
-    ports:
-      - "${REDIS_PORT}:${REDIS_PORT}"
     labels:
       - "${APP_ID}.redis"
     volumes:
       - redis:/data
-    healthcheck:
-      test: "redis-cli -p ${REDIS_PORT} ping"
 
 volumes:
   postgres:

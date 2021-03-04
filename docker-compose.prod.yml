@@ -1,0 +1,43 @@
+version: "3.7"
+
+services:
+  app:
+    environment:
+      APP_URL: "https://${VIRTUAL_HOST}"
+      DB_PORT: 5432
+      REDIS_PORT: 6379
+      LOG_CHANNEL: stderr
+    networks:
+      - app
+      - proxy
+    deploy:
+      replicas: 2
+
+  worker:
+    networks:
+      - app
+    deploy:
+      replicas: 2
+
+  postgres:
+    networks:
+      - app
+    healthcheck:
+      test: "pg_isready -U ${DB_USERNAME}"
+    deploy:
+      mode: global
+
+  redis:
+    networks:
+      - app
+    healthcheck:
+      test: "redis-cli ping"
+    deploy:
+      mode: global
+
+networks:
+  app:
+    name: "${APP_ID}"
+  proxy:
+    external: true
+    name: "${NETWORK_PROXY}"

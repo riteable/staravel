@@ -30,6 +30,13 @@ USER 1000:1000
 
 WORKDIR /app
 
+RUN mkdir -p storage/app/public \
+    storage/logs \
+    storage/framework/cache/data \
+    storage/framework/sessions \
+    storage/framework/testing \
+    storage/framework/views
+
 COPY --chown=1000:1000 composer.json .
 COPY --chown=1000:1000 composer.lock .
 COPY --chown=1000:1000 database/seeders database/seeders
