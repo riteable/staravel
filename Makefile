@@ -3,6 +3,8 @@ ifneq (,$(wildcard ./.env))
     export
 endif
 
+service = app
+
 COMMIT := $$(git rev-parse --short HEAD)
 IMAGE := ${APP_NAMESPACE}/${APP_ID}:${COMMIT}
 
