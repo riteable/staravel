@@ -17,6 +17,9 @@ up:
 down:
 	IMAGE=${IMAGE} docker-compose -f docker-compose.yml -f docker-compose.dev.yml down
 
+it:
+	docker exec -it ${APP_ID}-$(service) bash
+
 deploy:
 	IMAGE=${IMAGE} docker-compose -f docker-compose.yml -f docker-compose.prod.yml config | docker stack deploy -c - ${APP_ID}
 

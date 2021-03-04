@@ -22,6 +22,9 @@ services:
       # fpm.pool.pm.min_spare_servers: '20'
       # fpm.pool.pm.max_spare_servers: '100'
       # fpm.pool.pm.max_requests: '1000'
+    volumes:
+      - ./nginx-general.conf:/opt/docker/etc/nginx/vhost.common.d/10-general.conf
+      - ./nginx-vhost.conf:/opt/docker/etc/nginx/vhost.common.d/10-vhost.conf
     networks:
       - app
       - proxy
