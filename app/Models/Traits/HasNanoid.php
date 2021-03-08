@@ -11,16 +11,16 @@ trait HasNanoid
      *
      * @var \Hidehalo\Nanoid\Client
      */
-    private $_nanoidClient;
+    private $nanoidClient;
 
     protected function getNanoidClient()
     {
-        return $this->_nanoidClient;
+        return $this->nanoidClient;
     }
 
     protected function setNanoidClient(Client $client)
     {
-        $this->_nanoidClient = $client;
+        $this->nanoidClient = $client;
     }
 
     /**
