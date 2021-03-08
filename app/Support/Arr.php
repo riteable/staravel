@@ -7,11 +7,11 @@ class Arr
     /**
      * Search a multidimensional array by key and value.
      *
-     * @param  array  $array
+     * @param  array<mixed>  $array
      * @param  mixed  $key
      * @param  mixed  $value
      * @param  bool  $returnFirst
-     * @return array
+     * @return array<mixed>|null
      */
     public static function deepSearch($array, $key, $value, $returnFirst = false)
     {

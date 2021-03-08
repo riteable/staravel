@@ -9,8 +9,7 @@ class ProfileInformationController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\View\View
      */
     public function edit()
     {

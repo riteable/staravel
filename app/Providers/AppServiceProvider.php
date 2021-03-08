@@ -29,7 +29,7 @@ class AppServiceProvider extends ServiceProvider
         Paginator::defaultSimpleView('components.paginator');
 
         Blade::if('role', function ($role) {
-            if (!auth()->user()) {
+            if (auth()->user() === null) {
                 return false;
             }
 

@@ -13,7 +13,7 @@ class ManifestParser
      * Get manifest file.
      *
      * @param  string  $manifestPath
-     * @return array
+     * @return array<mixed>
      *
      * @throws \Exception
      */
@@ -35,7 +35,13 @@ class ManifestParser
                 throw new Exception('The manifest does not exist.');
             }
 
-            $manifests[$manifestPath] = json_decode(file_get_contents($manifestPath), true);
+            $contents = file_get_contents($manifestPath);
+
+            if ($contents === false) {
+                throw new Exception('The manifest file cannot be read.');
+            }
+
+            $manifests[$manifestPath] = json_decode($contents, true);
         }
 
         return $manifests[$manifestPath];
@@ -44,7 +50,7 @@ class ManifestParser
     /**
      * Get the path to a versioned manifest file.
      *
-     * @param  string  $assetPath
+     * @param  string  $key
      * @param  string  $manifestPath
      * @return \Illuminate\Support\HtmlString|string
      *
@@ -64,7 +70,8 @@ class ManifestParser
     /**
      * Get an icon by key and value.
      *
-     * @param  string  $assetPath
+     * @param  string  $key
+     * @param  mixed   $value
      * @param  string  $manifestPath
      * @return \Illuminate\Support\HtmlString|string
      *
