@@ -4,6 +4,7 @@ includes:
 parameters:
   paths:
     - app
+    - config
     - database
     - routes
   level: 8
