@@ -15,19 +15,19 @@ RUN mkdir -p storage/app/public \
 
 #--- Stage: Test
 
-FROM base as test
+# FROM base as test
 
-COPY --chown=1000:1000 . .
+# COPY --chown=1000:1000 . .
 
-RUN composer install \
-    --no-interaction \
-    --prefer-dist \
-    --no-scripts \
-    && composer clear-cache
+# RUN composer install \
+#    --no-interaction \
+#    --prefer-dist \
+#    --no-scripts \
+#    && composer clear-cache
 
-RUN ./vendor/bin/phpcs
-RUN ./vendor/bin/phpstan analyse --memory-limit=2G --no-progress
-RUN php artisan test
+# RUN ./vendor/bin/phpcs
+# RUN ./vendor/bin/phpstan analyse --memory-limit=2G --no-progress
+# RUN php artisan test
 
 #--- Stage: Build front-end assets
 
