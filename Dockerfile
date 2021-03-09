@@ -55,7 +55,7 @@ FROM base AS production
 
 EXPOSE 80
 
-COPY --chown=1000:1000 --from=test /app/composer.* ./
+COPY --chown=1000:1000 composer.* ./
 
 RUN composer install \
     --no-interaction \
