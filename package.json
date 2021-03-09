@@ -7,6 +7,9 @@
   },
   "private": true,
   "scripts": {
+    "php-test": "php artisan test",
+    "phpcs": "./vendor/bin/phpcs",
+    "phpstan": "./vendor/bin/phpstan analyse --memory-limit=2G",
     "prod": "webpack -c webpack.prod.js",
     "dev": "webpack -c webpack.dev.js --watch"
   },
@@ -32,5 +35,10 @@
     "webpack-merge": "^5.7.3",
     "webpack-pwa-manifest": "^4.3.0",
     "webpack-remove-empty-scripts": "^0.7.1"
-  }
+  },
+  "pre-commit": [
+    "phpcs",
+    "phpstan",
+    "php-test"
+  ]
 }
