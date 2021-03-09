@@ -1,6 +1,6 @@
 # Stage: Build front-end assets
 
-FROM node:12.19.0-alpine3.11 AS builder
+FROM node:14.16.0-buster-slim AS builder
 
 WORKDIR /app
 
@@ -40,8 +40,13 @@ COPY --chown=1000:1000 composer.lock .
 COPY --chown=1000:1000 database/seeders database/seeders
 COPY --chown=1000:1000 database/factories database/factories
 
-RUN composer install --optimize-autoloader --no-dev --prefer-dist --no-scripts && \
-    composer clear-cache
+RUN composer install \
+    --no-interaction \
+    --optimize-autoloader \
+    --no-dev \
+    --prefer-dist \
+    --no-scripts \
+    && composer clear-cache
 
 COPY --chown=1000:1000 . .
 COPY --chown=1000:1000 --from=builder /app/public/css public/css
