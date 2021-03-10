@@ -1,7 +1,7 @@
 {
   "name": "larawire",
   "description": "A basic Laravel + Livewire project template.",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "author": {
     "name": "Riteable",
     "url": "https://github.com/riteable"
