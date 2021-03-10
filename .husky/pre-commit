@@ -1,0 +1,7 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+npm run php-lint
+npm run js-lint
+npm run php-test
+npm run js-test
