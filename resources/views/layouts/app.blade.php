@@ -21,7 +21,6 @@
             current="{{ request()->cookie(config('theme.cookie')) ?? 'light' }}"
         />
 
-        <script src="{{ manifest_get('vendor.js', 'assets-manifest.json') }}" defer></script>
         <script src="{{ manifest_get('app.js', 'assets-manifest.json') }}" defer></script>
     </head>
 

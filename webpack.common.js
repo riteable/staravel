@@ -11,9 +11,6 @@ const meta = projectMeta({ sass: './resources/css/themes/_dark.scss' })
 module.exports = {
   entry: {
     app: './resources/js/app.js',
-    vendor: [
-      './resources/js/vendor/livewire/livewire.js'
-    ],
     'theme-light': './resources/css/theme-light.scss',
     'theme-dark': './resources/css/theme-dark.scss'
   },
