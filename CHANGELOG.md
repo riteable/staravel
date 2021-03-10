@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.1.0](https://github.com/riteable/staravel/compare/v3.0.0...v3.1.0) (2021-03-10)
+
+
+### Features
+
+* added commitlint and husky, removed pre-commit ([cee211a](https://github.com/riteable/staravel/commit/cee211afd076afc31e2cd2ac2431574e08757088))
+
 ## [3.0.0](https://github.com/riteable/staravel/compare/v2.0.0...v3.0.0) (2021-03-10)
 
 
