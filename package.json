@@ -1,6 +1,6 @@
 {
-  "name": "larawire",
-  "description": "A basic Laravel + Livewire project template.",
+  "name": "staravel",
+  "description": "An opinionated Laravel starter template.",
   "version": "2.0.0",
   "author": {
     "name": "Riteable",

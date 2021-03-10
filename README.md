@@ -1,6 +1,6 @@
-# Larawire
+# Staravel
 
-A basic Laravel + Livewire project template.
+An opinionated Laravel starter template.
 
 ## Usage
 
@@ -42,6 +42,6 @@ $ make down
 To run the database migrations, go inside the app container, and execute the command:
 
 ```
-$ docker exec -it larawire-app bash
+$ docker exec -it staravel-app bash
 $ php artisan migrate
 ```

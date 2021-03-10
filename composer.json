@@ -1,7 +1,7 @@
 {
-  "name": "riteable/larawire",
+  "name": "riteable/staravel",
   "type": "project",
-  "description": "A basic Laravel + Livewire project template.",
+  "description": "An opinionated Laravel starter template.",
   "keywords": [
     "framework",
     "laravel"

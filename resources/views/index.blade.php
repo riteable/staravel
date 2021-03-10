@@ -12,7 +12,7 @@
                     Let this be the start of something beautiful.
                 </p>
 
-                <a href="https://github.com/riteable/larawire" target="_blank" class="button">
+                <a href="https://github.com/riteable/staravel" target="_blank" class="button">
                     Source @ Github
                 </a>
             </div>
