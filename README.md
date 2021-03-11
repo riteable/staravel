@@ -13,6 +13,8 @@ How it differs from a blank Laravel starter project:
 - [Redis](https://redis.io/) for caching and sessions.
 - [PostgreSQL](https://www.postgresql.org/) for general data storage.
 - Queue worker runs in a separate container, and is scalable with Docker Swarm.
+- Queue connection is set to Redis by default.
+- Exceptions log to `stderr` by default.
 - Compatible with [nginx-proxy](https://github.com/nginx-proxy/nginx-proxy) and [letsencrypt-nginx-proxy-companion](https://github.com/nginx-proxy/docker-letsencrypt-nginx-proxy-companion).
 - Front-end assets included: [Alpine.js](https://github.com/alpinejs/alpine), [Heroicons](https://heroicons.com/), [Bulma](https://bulma.io/).
 - Light/dark theme switching enabled by default.
@@ -20,6 +22,15 @@ How it differs from a blank Laravel starter project:
 - Pre-commit linting ([phpcs](https://github.com/squizlabs/PHP_CodeSniffer), [phpstan](https://github.com/phpstan/phpstan)) and testing included.
 - Commit linting based on [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 - Basic role-based auth, with `user` and `admin` roles.
+
+## Requirements
+
+- PHP 7
+- Composer 2
+- Node.js
+- Docker
+- Docker Compose
+- GNU Make
 
 ## Usage
 
@@ -66,6 +77,8 @@ Build front-end assets and watch for changes:
 $ npm run dev
 ```
 
+You can view the website on `http://localhost:8000` (or other port if you've changed the `APP_PORT` environment variable).
+
 ## Migrations
 
 To run database migrations, go inside the app container:
@@ -79,6 +92,12 @@ and execute the migration command:
 ```
 $ php artisan migrate
 ```
+
+## Mail
+
+Setup mail before you try to register a user, so you can receive an activation link. The `MAIL_*` environment variables are preset to work with Gmail SMTP.
+
+**NOTE:** If you're using Gmail SMTP with a Google account which has 2FA enabled, you will need to create an [App Password](https://support.google.com/accounts/answer/185833) and use that as your `MAIL_PASSWORD`.
 
 ## Admin
 
