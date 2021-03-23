@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.1.3](https://github.com/riteable/staravel/compare/v3.1.2...v3.1.3) (2021-03-23)
+
+
+### Bug Fixes
+
+* added prepare script ([2cfbd99](https://github.com/riteable/staravel/commit/2cfbd99829fb03e2ff288bf3f1937be3f3d3262d))
+
 ### [3.1.2](https://github.com/riteable/staravel/compare/v3.1.1...v3.1.2) (2021-03-11)
 
 
