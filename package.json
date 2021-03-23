@@ -12,6 +12,7 @@
     "js-test": "jest ./resources/js/tests",
     "php-test": "php artisan test",
     "php-lint": "./vendor/bin/phpcs && ./vendor/bin/phpstan analyse --memory-limit=2G",
+    "prepare": "husky install",
     "prod": "webpack -c webpack.prod.js",
     "dev": "webpack -c webpack.dev.js --watch",
     "release": "standard-version"
