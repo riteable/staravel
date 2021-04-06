@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.2.0](https://github.com/riteable/staravel/compare/v3.1.4...v3.2.0) (2021-04-06)
+
+
+### Features
+
+* added more components ([b788305](https://github.com/riteable/staravel/commit/b788305392e34b0f0fc5ba0de7e40950aa238bf8))
+* added placeholder component ([ba8df6d](https://github.com/riteable/staravel/commit/ba8df6d27e818ef69a318d60e7e98886b6c0e303))
+
 ### [3.1.4](https://github.com/riteable/staravel/compare/v3.1.3...v3.1.4) (2021-04-01)
 
 
