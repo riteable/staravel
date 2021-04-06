@@ -1,0 +1,31 @@
+.toast {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+
+    &.is-active {
+        opacity: 1;
+    }
+
+    &.is-top {
+        top: 0;
+
+        &.is-active {
+            transform: translate(0, 1rem);
+        }
+    }
+
+    &.is-bottom {
+        bottom: 0;
+
+        &.is-active {
+            transform: translate(0, -1rem);
+        }
+    }
+}

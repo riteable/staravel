@@ -32,5 +32,7 @@
         </main>
 
         <x-layout.footer />
+
+        <x-toast class="is-bottom" />
     </body>
 </html>
