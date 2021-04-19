@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.3.0](https://github.com/riteable/staravel/compare/v3.2.1...v3.3.0) (2021-04-19)
+
+
+### Features
+
+* added copy plugin ([670a4df](https://github.com/riteable/staravel/commit/670a4dfaaab1d4ffdbd0cf3ac7a0ac846640b8e0))
+
+
+### Bug Fixes
+
+* added toast to components ([a7613c3](https://github.com/riteable/staravel/commit/a7613c341b98fc39cebdb1513fe7f5ddc9d86dd9))
+* fixed store imports ([e008c01](https://github.com/riteable/staravel/commit/e008c01272abc45bdb4d2d416fedf849ffe4de35))
+
 ### [3.2.1](https://github.com/riteable/staravel/compare/v3.2.0...v3.2.1) (2021-04-19)
 
 
