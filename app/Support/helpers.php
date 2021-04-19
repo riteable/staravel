@@ -3,7 +3,7 @@
 use App\Support\ManifestParser;
 use Illuminate\Support\Arr;
 
-if (! function_exists('manifest_asset')) {
+if (! function_exists('manifest_get')) {
     /**
      * Get the path to a versioned manifest file.
      *

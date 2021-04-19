@@ -4,6 +4,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const WebpackPwaManifest = require('webpack-pwa-manifest')
 const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts')
+const CopyPlugin = require('copy-webpack-plugin')
 const projectMeta = require('@riteable/project-meta')
 
 const meta = projectMeta({ sass: './resources/css/themes/_dark.scss' })
@@ -66,6 +67,14 @@ module.exports = {
           src: path.resolve('resources/img/icon.png'),
           sizes: [16, 24, 32, 64, 96, 128, 192, 256, 384, 512],
           destination: path.join('img', 'icons')
+        }
+      ]
+    }),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: './resources/img/',
+          to: 'img/'
         }
       ]
     })
