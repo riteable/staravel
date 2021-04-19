@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.2.1](https://github.com/riteable/staravel/compare/v3.2.0...v3.2.1) (2021-04-19)
+
+
+### Bug Fixes
+
+* included toast ([bd97510](https://github.com/riteable/staravel/commit/bd975102d199e2fedc4b12add809a763bac0d824))
+
 ## [3.2.0](https://github.com/riteable/staravel/compare/v3.1.4...v3.2.0) (2021-04-06)
 
 
