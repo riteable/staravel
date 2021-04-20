@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.4.0](https://github.com/riteable/staravel/compare/v3.3.0...v3.4.0) (2021-04-20)
+
+
+### Features
+
+* added textarea component ([08cf325](https://github.com/riteable/staravel/commit/08cf325d15fb6e6cf3588d7210b9057e357da2d3))
+
 ## [3.3.0](https://github.com/riteable/staravel/compare/v3.2.1...v3.3.0) (2021-04-19)
 
 
