@@ -26,6 +26,12 @@ export default function () {
       this.light = el.dataset.light
       this.dark = el.dataset.dark
     },
+    isLight () {
+      return this.current === this.light
+    },
+    isDark () {
+      return this.current === this.dark
+    },
     toggle () {
       const el = this.el()
       let theme = null
