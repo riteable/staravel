@@ -1,7 +1,11 @@
-@each $key, $size in $icon-sizes {
-    .icon-#{$key} {
-        width: $size;
-        height: $size;
+.icon {
+    vertical-align: -0.25em;
+
+    @each $key, $size in $icon-sizes {
+        &.icon-#{$key} {
+            width: $size;
+            height: $size;
+        }
     }
 }
 
