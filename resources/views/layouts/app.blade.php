@@ -18,7 +18,7 @@
             id="stylesheet-theme"
             light="{{ manifest_get('theme-light.css', 'assets-manifest.json') }}"
             dark="{{ manifest_get('theme-dark.css', 'assets-manifest.json') }}"
-            current="{{ request()->cookie(config('theme.cookie')) ?? 'light' }}"
+            current="{{ request()->cookie(config('theme.cookie')) ?? config('theme.default') }}"
         />
 
         <script src="{{ manifest_get('app.js', 'assets-manifest.json') }}" defer></script>
