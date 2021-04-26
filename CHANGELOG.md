@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.5.0](https://github.com/riteable/staravel/compare/v3.4.0...v3.5.0) (2021-04-26)
+
+
+### Features
+
+* added default theme config ([7a173f8](https://github.com/riteable/staravel/commit/7a173f8944f60d10c2b2c423a47e66fd6d53b2e9))
+* added util methods to theme component ([ae07528](https://github.com/riteable/staravel/commit/ae075289b2719a22ba23c760597b508d6ae49618))
+
+
+### Bug Fixes
+
+* fixed container padding ([e543ef1](https://github.com/riteable/staravel/commit/e543ef1dc0918fed8bd6cedce1159fa1963236dc))
+* fixed icon positioning ([aefc28a](https://github.com/riteable/staravel/commit/aefc28a7e979a97cb83252656ef39e4c8f0deb3a))
+* included other elements to fix toast ([c2da030](https://github.com/riteable/staravel/commit/c2da030024c627798474ff05432dba45d5acfecf))
+
 ## [3.4.0](https://github.com/riteable/staravel/compare/v3.3.0...v3.4.0) (2021-04-20)
 
 
