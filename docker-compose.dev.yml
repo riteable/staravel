@@ -36,7 +36,7 @@ services:
     container_name: "${APP_ID}-postgres"
     command: "-p ${DB_PORT}"
     ports:
-      - "${DB_PORT}:5432"
+      - "${DB_PORT}:${DB_PORT}"
     healthcheck:
       test: "pg_isready -p ${DB_PORT} -U ${DB_USERNAME}"
 
