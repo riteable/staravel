@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.5.2](https://github.com/riteable/staravel/compare/v3.5.1...v3.5.2) (2021-05-05)
+
+
+### Bug Fixes
+
+* fixed asset url ([4ce1d47](https://github.com/riteable/staravel/commit/4ce1d47644e525bf9a8005c9952c1499cfdae740))
+* fixed port mapping ([822de87](https://github.com/riteable/staravel/commit/822de87dc431a0baeeb05ae18b104e86eef36d18))
+* updated packages ([c2c7013](https://github.com/riteable/staravel/commit/c2c70132ca2e78b1d3edfdd1089aebe97c048db0))
+
 ### [3.5.1](https://github.com/riteable/staravel/compare/v3.5.0...v3.5.1) (2021-04-26)
 
 
