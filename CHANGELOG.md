@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.5.3](https://github.com/riteable/staravel/compare/v3.5.2...v3.5.3) (2021-07-06)
+
+
+### Bug Fixes
+
+* updated packages ([dc59165](https://github.com/riteable/staravel/commit/dc59165aadc6ea6d39a22c22c482d4b4601cd21f))
+
 ### [3.5.2](https://github.com/riteable/staravel/compare/v3.5.1...v3.5.2) (2021-05-05)
 
 
